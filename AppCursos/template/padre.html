@@ -48,17 +48,19 @@
         </div>
     </nav>
     <!-- Masthead-->
-    <!-- <header class="masthead">
+    <header class="masthead">
         <div class="container position-relative">
-            <h1 class="text-center" style="color: white;">App de Cursos</h1>
+
+            <!-- START OF HEADER  -->
+            {% block header %}
+            <h1 class="text-center" style="color: white;">Bienvenido a App de Cursos</h1>
+            {% endblock %}
+            <!-- END OF HEADER  -->
+
         </div>
-    </header> -->
+    </header>
 
-     <!-- START OF HEADER  -->
-     {% block header %}
 
-     {% endblock %}
-     <!-- END OF HEADER  -->
 
     <!-- START OF CONTENT  -->
     {% block content %}

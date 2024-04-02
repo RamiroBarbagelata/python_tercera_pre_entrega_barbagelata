@@ -21,7 +21,7 @@ class Students(models.Model):
     
 class Professors(models.Model):
     professors_name = models.CharField(max_length=40)
-    professors_lastname= models.CharField(max_length=40)
+    professors_lastname = models.CharField(max_length=40)
     file_number = models.IntegerField()
     
     

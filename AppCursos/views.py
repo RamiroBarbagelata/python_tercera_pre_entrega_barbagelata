@@ -113,7 +113,7 @@ def students_form(request):
 # PROFESSORS
 
 def new_professors(request , professors_name  , professors_lastname , file_number):
-    professor = Professors(professors_name=professors_name, professors_lastname=professors_lastname , file_number=file_number)
+    professor = Professors(professors_name =professors_name, professors_lastname=professors_lastname , file_number =file_number)
     professor.save()
     text = f"Se guardó en la Base de Datos de profesores: {professor.professors_name} {professor.professors_lastname} ({professor.file_number})"
     return HttpResponse(text)

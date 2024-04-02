@@ -2,6 +2,10 @@
 
 {% load static %}
 
+{% block header %}
+    <h1 class="text-center" style="color: white;">Profesores</h1>
+{% endblock %}
+
 {% block content %}
 <main>
     <a href="new_professors" class="btn btn-primary btn-sm">Agregar Nuevo Profesor</a>
@@ -9,10 +13,10 @@
         <div class="row">
             <div class="col-12  col-md-4">
                 <div class="card">
-                    <img src="{% static 'AppCursos/assets/img/student_01.jpeg' %}" />
+                    <img src="{% static 'AppCursos/assets/img/professor_1.jpeg' %}" />
                     <div class="card-body">
                         <h5 class="card-title">Valentina Rodríguez</h5>
-                        <p class="card-text">Profesor</p>
+                        <p class="card-text">Profesora</p>
                         <a class="btn btn-danger" href="">Enviar mensaje</a>
                     </div>
                 </div>
@@ -20,10 +24,10 @@
 
             <div class="col-12  col-md-4">
                 <div class="card">
-                    <img src="{% static 'AppCursos/assets/img/student_02.jpeg' %}" />
+                    <img src="{% static 'AppCursos/assets/img/professor_2.jpeg' %}" />
                     <div class="card-body">
                         <h5 class="card-title">Sofía García</h5>
-                        <p class="card-text">Profesor</p>
+                        <p class="card-text">Profesora</p>
                         <a class="btn btn-danger" href="">Enviar mensaje</a>
                     </div>
                 </div>
@@ -31,7 +35,7 @@
 
             <div class="col-12  col-md-4">
                 <div class="card">
-                    <img src="{% static 'AppCursos/assets/img/student_03.jpeg' %}" />
+                    <img src="{% static 'AppCursos/assets/img/professor_3.jpeg' %}" />
                     <div class="card-body">
                         <h5 class="card-title">Juan Martínez López</h5>
                         <p class="card-text">Profesor</p>
