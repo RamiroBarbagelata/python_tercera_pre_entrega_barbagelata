@@ -1,0 +1,33 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+<div class="container-form">
+    <form action="{% url 'new_students' %}" method="POST" class="form">
+        {% csrf_token %}
+        <div class="students_name">
+            <p>Nombre:</p>
+            <input type="text" name = "students_name" placeholder="Ingresa tu nombre" required>
+        </div>
+    
+        <div class="students_name">
+            <p>Apellido:</p>
+            <input type="text" name="students_lastname" placeholder="Ingresa tu apellido" required>
+        </div>
+
+        <div class="students_names">
+            <p>Legajo:</p>
+            <input type="number" name="file_number" placeholder="Ingresa tu legajo" required>
+        </div>
+    
+        <div class="container-btn">
+            <button class="btn">Enviar</button>
+        </div>
+    
+    </form>
+</div>
+    
+
+{% endblock %}

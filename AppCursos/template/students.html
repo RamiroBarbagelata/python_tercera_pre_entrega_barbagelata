@@ -1,0 +1,110 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block content %}
+<main>
+    <a href="new_students" class="btn btn-primary btn-sm">Agregar Nuevo Alumno</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{% static 'AppCursos/assets/img/student_01.jpeg' %}" />
+                    <div class="card-body">
+                        <h5 class="card-title">Valentina Rodríguez</h5>
+                        <p class="card-text">El curso de JavaScript ha sido muy útil. Me siento más segura ahora.</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{% static 'AppCursos/assets/img/student_02.jpeg' %}" />
+                    <div class="card-body">
+                        <h5 class="card-title">Sofía García</h5>
+                        <p class="card-text">El curso de ciencia de datos ha sido muy útil. Ahora me siento más
+                            preparada para analizar datos.</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{% static 'AppCursos/assets/img/student_03.jpeg' %}" />
+                    <div class="card-body">
+                        <h5 class="card-title">Juan Martínez López</h5>
+                        <p class="card-text">El curso de programación full stack fue intenso pero valió la pena.</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{% static 'AppCursos/assets/img/student_04.jpeg' %}" />
+                    <div class="card-body">
+                        <h5 class="card-title">Alejandro Pérez Ramírez</h5>
+                        <p class="card-text">El curso de JavaScript fue esencial. Ahora tengo las bases para desarrollar
+                            aplicaciones web.</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12  col-md-4">
+                <div class="card">
+                    <img src="{% static 'AppCursos/assets/img/student_05.jpeg' %}" />
+                    <div class="card-body">
+                        <h5 class="card-title">Carlos Gutiérrez Hernández</h5>
+                        <p class="card-text">El curso de diseño UX/UI fue inspirador. Estoy listo para crear
+                            experiencias increíbles.</p>
+                        <a class="btn btn-danger" href="">Enviar mensaje</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% for n in students %}
+
+    <div class="container">
+        <div class="col-12  col-md-4">
+            <div class="card">
+                <img src="{% static 'AppCursos/assets/img/student_02.jpeg' %}" />
+                <div class="card-body">
+                    <h5 class="card-title">{{n.students_name}} {{n.students_lastname}}</h5>
+                    <p class="card-text">Legajo Nº: {{n.file_number}}.</p>
+                    <a class="btn btn-danger" href="">Enviar mensaje</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+
+<!-- <main>
+        <div class="container">
+    
+        {% for n in students %}
+                    <div class="card">
+                        <div class="students">
+                            <img class="perfil" src="{% static 'AppCursos/assets/img/student_05.jpeg' %}" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h4>{{n.students_name}} {{n.students_lastname}}</h4>
+                            <p>{{n.file_number}}</p>                        
+                        </div>
+                        <div container-btn>
+                            <a class="btn">Ver Alumno</a>
+                        </div>
+                    </div>    
+        {% endfor %}
+    
+        </div>
+    </main> -->
+
+
+{% endblock %}

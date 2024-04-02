@@ -1,0 +1,29 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    {% if courses %}
+        <h1>Resultado de la busqueda</h1>
+        <ul>
+        {% for course in courses %}
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+
+                    <th>Curso: {{course.course_name}}</th>
+                    <th>Comisión: {{course.commission}}</th>
+                </tr>            
+            </thead>
+        </table>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            No se encontraron cursos con ese nombre
+        </div>
+    {% endif %}
+    <a class="btn btn-primary" href="{% url 'courses' %}" role="button">Volver a Cursos</a>
+
+{% endblock %}

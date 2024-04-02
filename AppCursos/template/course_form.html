@@ -1,0 +1,33 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+    <!-- <form action="course_registration" method="POST">
+        {% csrf_token %}
+        <p>Curso:</p>
+        <input type="text" name="course_name" required>
+        <p>Comisión:</p>
+        <input type="number" name="commission" required>
+        
+        <button>Enviar</button>
+    </form> -->
+
+
+    <form action="course_registration" method="POST">
+        {% csrf_token %}
+        <div class="col-md-6">
+            <label for="exampleInputEmail1" class="form-label">Curso</label>
+            <input type="text" class="form-control" id="" name="course_name" required>
+        </div>
+        <div class="col-md-6">
+            <label for="exampleInputPassword1" class="form-label">Comisión</label>
+            <input type="number" class="form-control" id="" name="commission" required>
+        </div>
+        <a class="btn btn-secondary" href="{% url 'courses' %}" role="button">Volver a Cursos</a>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    
+
+{% endblock %}

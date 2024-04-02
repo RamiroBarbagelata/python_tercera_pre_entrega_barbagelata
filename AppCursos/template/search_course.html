@@ -1,0 +1,23 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block content %}  
+
+    <!-- <h2>Buscar Curso</h2>
+    <form action="search" method="GET">
+        <p>Nombre</p>
+        <input type="text" name="course_name" id="course_name">
+        <button>Buscar</button>
+    </form>  -->
+
+    <h2>Buscar Curso</h2>
+    <form action="search" method="GET">
+        <div class="col-md-6">
+            <label for="buscar_curso" class="form-label">Curso</label>
+            <input type="text" class="form-control" id="" name="course_name" required>
+        </div>  
+        <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+
+{% endblock %}
